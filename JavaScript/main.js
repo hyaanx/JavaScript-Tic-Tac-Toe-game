@@ -8,12 +8,12 @@ function end(num1, num2, num3, num4, num5, num6, num7, num8, num9) {
   document.getElementById("item" + num1).style.backgroundColor = "#008dff";
   document.getElementById("item" + num2).style.backgroundColor = "#008dff";
   document.getElementById("item" + num3).style.backgroundColor = "#008dff";
-  document.getElementById("item" + num5).style.backgroundColor = "#222";
-  document.getElementById("item" + num6).style.backgroundColor = "#222";
-  document.getElementById("item" + num7).style.backgroundColor = "#222";
-  document.getElementById("item" + num8).style.backgroundColor = "#222";
-  document.getElementById("item" + num9).style.backgroundColor = "#222";
-  document.getElementById("item" + num4).style.backgroundColor = "#222";
+  document.getElementById("item" + num4).style.cssText = "pointer-events: none; background-color: #222;";
+  document.getElementById("item" + num5).style.cssText = "pointer-events: none; background-color: #222;";
+  document.getElementById("item" + num6).style.cssText = "pointer-events: none; background-color: #222;";
+  document.getElementById("item" + num7).style.cssText = "pointer-events: none; background-color: #222;";
+  document.getElementById("item" + num8).style.cssText = "pointer-events: none; background-color: #222;";
+  document.getElementById("item" + num9).style.cssText = "pointer-events: none; background-color: #222;";
 
   setInterval(function () {
     head.innerHTML += ".";
@@ -21,6 +21,13 @@ function end(num1, num2, num3, num4, num5, num6, num7, num8, num9) {
   setTimeout(function () {
     location.reload();
   }, 3900);
+}
+
+function none() { 
+  
+    boxex.forEach((box) => {
+    box.style.cssText = "pointer-events: none;";
+  });
 }
 
 function winner() {
@@ -85,6 +92,7 @@ function winner() {
   ) {
     end(3, 6, 9, 2, 5, 8, 1, 4, 7);
   }
+
 }
 
 // Array.from(boxex).every((box) => box.innerHTML !== "")
