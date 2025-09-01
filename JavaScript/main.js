@@ -92,12 +92,12 @@ function winner() {
 boxex.forEach((box) => {
   box.addEventListener("click", function () {
     if (box.innerHTML == "") {
-      if (head.innerHTML == "X") {
+      if (head.innerHTML == "turn's X") {
         box.innerHTML = "X";
-        head.innerHTML = "O";
+        head.innerHTML = "turn's O";
       } else {
         box.innerHTML = "O";
-        head.innerHTML = "X";
+        head.innerHTML = "turn's X";
       }
     }
 
